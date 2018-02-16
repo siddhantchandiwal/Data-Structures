@@ -13,14 +13,24 @@ public class Stack {
     }
 
     public void push(long j){
-        top++;
-        stackArray[top] = j;
+        if(isFull()){
+            System.out.println("Stack is Full.. Try popping out few elements");
+        }else{
+            top++;
+            stackArray[top] = j;
+        }
     }
 
     public long pop(){
-        int old_top = top;
-        top--;
-        return stackArray[old_top];
+        if(isEmpty()){
+            System.out.println("Stack is already empty");
+            return -1;
+        }else{
+            int old_top = top;
+            top--;
+            return stackArray[old_top];
+        }
+
     }
 
     public long peek(){

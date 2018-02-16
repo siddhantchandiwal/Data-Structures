@@ -3,7 +3,7 @@ package ds.stack;
 public class App {
 
     public static void main(String [] args){
-        Stack s = new Stack(30);
+        Stack s = new Stack(10);
 
         s.push(10);
         s.push(20);
@@ -15,6 +15,11 @@ public class App {
         s.push(80);
         s.push(90);
         s.push(100);
+        s.push(100);
+        s.push(100);
+        s.push(100);
+
+
 
         while(!s.isEmpty()){
             Long  value = s.pop();
